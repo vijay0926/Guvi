@@ -13,7 +13,7 @@ public class number {
 		}
 		for(int i=0;i<a;i++)
 		{
-		 System.out.println(+min(arr[i]%10,arr[i]/10));
+		 System.out.println(+min(arr[i]%10,arr[i]/10)-1);
 		}
 	}
 }
