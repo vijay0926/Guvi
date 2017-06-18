@@ -1,105 +1,42 @@
-    import java.util.Scanner;
+package prp;
+import java.util.Scanner;
+import java.util.Arrays;
+public class simple {
+public static void main(String[] args) {	
+Scanner s=new Scanner(System.in);
+System.out.println("Enter the dimension of array is:");
+int n1=s.nextInt();
+int n2=s.nextInt();
+int arr[][]=new int[n1][n2];
+int a[]=new int[n1*n2];
+int k=0;
+System.out.println("The input array is:");
+for(int i=0;i<n1;i++)
+{
+	for(int j=0;j<n2;j++)
+	{
+		a[k]=Integer.parseInt(args[k]);
+		arr[i][j]=Integer.parseInt(args[k]);
+		System.out.print(+arr[i][j]+" ");
+		k++;
+	}
+	System.out.println();
+}
+int temp=arr[0][2];
+int temp1=arr[1][0];
+arr[0][2]=arr[1][2];
+arr[1][2]=temp;
+arr[1][0]=arr[1][1];
+arr[1][2]=temp1;
+System.out.println("output matrix");
+for(int i=0;i<n1;i++)
+{
+	for(int j=0;j<n2;j++)
+	{
+		System.out.print(+arr[i][j]+" ");
+	}
+	System.out.println();
+}
 
-    public class matrixInterchange
-
-    {
-
-        public static void main(String[] args) 
-
-        {
-
-            int p, q, temp = 0;
-
-            Scanner s = new Scanner(System.in);
-
-            System.out.print("Enter number of rows in matrix:");
-
-            p = s.nextInt();
-
-            System.out.print("Enter number of columns in matrix:");
-
-            q = s.nextInt();
-
-            if (p == q) 
-
-            {
-
-                int a[][] = new int[p][q];
-
-                System.out.println("Enter all the elements of matrix:");
-
-                for (int i = 0; i < p; i++) 
-
-                {
-
-                    for (int j = 0; j < q; j++) 
-
-                    {
-
-                        a[i][j] = s.nextInt();
-
-                    }
-
-                }
-
-                System.out.println("Given Matrix:");
-
-                for (int i = 0; i < p; i++) 
-
-                {
-
-                    for (int j = 0; j < q; j++) 
-
-                    {
-
-                        System.out.print(a[i][j] + " ");
-
-                    }
-
-                    System.out.println("");
-
-                 }
-
-                for(int j = 0; j < q; j++)
-
-                {
-
-                    temp = a[j][j];
-
-                    a[j][j] = a[j][q-1-j];
-
-                    a[j][q-1-j] = temp;
-
-                }
-
-                System.out.println("Matrix after interchanging diagonals");
-
-                for (int i = 0; i < p; i++) 
-
-                {
-
-                    for (int j = 0; j < q; j++) 
-
-                    {
-
-                        System.out.print(a[i][j] + " ");
-
-                    }
-
-                    System.out.println("");
-
-                }
-
-            } 
-
-            else 
-
-            {
-
-                System.out.println("Rows not equal to column");
-
-            }
-
-        }
-
-   }
+}
+}
